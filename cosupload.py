@@ -111,4 +111,3 @@ for delete_file in delete_files:
     print(delete_file + '   删除成功')
 
 print('执行完成！')
-time.sleep(10000)
