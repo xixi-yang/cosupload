@@ -49,7 +49,10 @@ while True:
         Prefix='',
         Marker=marker
     )
-    contents = contents + response['Contents']
+    # 存储桶有对象时才获取
+    if len(response) != 0:
+        contents = contents + response['Contents']
+
     if response['IsTruncated'] == 'false':
         break
     marker = response['NextMarker']
