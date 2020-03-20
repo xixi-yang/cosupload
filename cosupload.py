@@ -88,8 +88,8 @@ delete_files = []
 cos_files = cos_filename_etag_map.keys()
 for cos_file in cos_files:
     cos_file = str(cos_file)
-    cos_file = cos_file.replace('/', '\\')
-    abs_path = os.path.join(local_path, cos_file)
+    cos_file_path = cos_file.replace('/', '\\')
+    abs_path = os.path.join(local_path, cos_file_path)
     if abs_path not in local_files:
         delete_files.append(cos_file)
 
